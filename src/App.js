@@ -1,13 +1,16 @@
+import  { ThemeProvider } from 'styled-components;';
 import React from 'react';
 
 import Home from './pages/Home'
-import theme from './theme'
+import Theme from './theme'
 
 import './App.css';
 
 function App() {
   return (
-    <Home/>
+    <ThemeProvider theme={ Theme }>
+      <Home/>
+  </ThemeProvider>
     );
 }
 
