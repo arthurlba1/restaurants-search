@@ -2,6 +2,7 @@ import App from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import '@material/react-material-icon/dist/material-icon.css';
 import '@material/react-text-field/dist/text-field.css';
 
 ReactDOM.render(
