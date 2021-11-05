@@ -18,3 +18,7 @@ export const Search = styled.section`
 export const Logo = styled.img`
   margin: 15px;
 `; 
+
+export const Wrapper = styled.div`
+  display: flex;
+`; 
