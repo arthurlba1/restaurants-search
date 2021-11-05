@@ -1,5 +1,5 @@
 import { Reset } from 'styled-reset';
-import { ThemeProvider } from 'styled-components;';
+import { ThemeProvider } from 'styled-components';
 import React from 'react';
 
 import Home from './pages/Home';
