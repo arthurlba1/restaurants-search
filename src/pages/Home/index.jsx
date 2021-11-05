@@ -1,5 +1,24 @@
-import React from "react";
+import logo from '../../assets/logo.svg'
+import React, { useState } from 'react';
+import TextField, { Input } from '@material/react-text-field';
 
-const Home = () => <div>Hello world</div>
+import { Container, Logo, Search, Wrapper } from './style'
 
-export default Home; 
+const Home = () => {
+    const [inputValue, setInputValue] = useState('');
+    return (
+        <Wrapper>
+            <Container>
+                <Search>
+                    <Logo src={logo} alt="web app logo"/>
+                    <TextField
+                        outlined
+                        label="Search"
+                        trailingIcon={<MaterialIcon role="button" icon="search" />}>
+                        <Input value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+                    </TextField>
+                </Search>
+            </Container>
+        </Wrapper>
+    );
+};
