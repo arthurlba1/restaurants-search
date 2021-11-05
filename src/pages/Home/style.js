@@ -22,3 +22,9 @@ export const Logo = styled.img`
 export const Wrapper = styled.div`
   display: flex;
 `; 
+
+export const Carousel = styled(Slider)`
+  .slick-slide {
+    margin-right: 16px;
+  }
+`;
