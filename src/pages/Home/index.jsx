@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Slider from "react-slick";
 import TextField, { Input } from '@material/react-text-field';
 
-import { Card } from '../../components'; 
+import { Card, RestaurantCard } from '../../components'; 
 import { Carousel, Container, Logo, Search, Wrapper } from './style';
 
 const Home = () => {
@@ -35,6 +35,7 @@ const Home = () => {
                         
                     </Carousel>
                 </Search>
+                <RestaurantCard />
             </Container>
         </Wrapper>
     );
