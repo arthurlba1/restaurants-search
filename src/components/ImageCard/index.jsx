@@ -13,6 +13,16 @@ const Card = styled.div`
   }
 `;
 
-const ImageCard = ({ photo }) => <Card photo={ photo } />;
+const Title = styled.span`
+  font-family: ${(props) => props.theme.fonts.regular};
+  color: #ffffff;
+  font-size: 16px;
+`;
+
+const ImageCard = ({ photo }) => (
+    <Card photo={ photo }>
+       <Title>Nome do restaurante</Title>
+    </Card>
+)
 
 export default ImageCard;
