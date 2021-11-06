@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Slider from 'react-slick';
 
 export const Container = styled.aside`
   background-color: ${({ theme: { colors } }) => colors.background};
