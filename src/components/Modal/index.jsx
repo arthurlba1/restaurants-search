@@ -20,7 +20,7 @@ const Modal = ({ children, open, onClose }) => {
           <Dialog onClick={onDialogClick}>{children}</Dialog>
         </Overlay>
       </Portal>
-    )
+    );
 };
 
 export default Modal;
