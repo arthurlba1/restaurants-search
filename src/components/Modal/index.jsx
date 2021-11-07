@@ -1,26 +1,37 @@
 import Portal from './Portal'
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Dialog, Overlay } from './styles'
 
 const Modal = ({ children, open, onClose }) => {
-    if(!open) return null;
-
+    useEffect(() => {
+      function onEsc(event) {
+        if (event.keyCode === 27) onClose();
+      }
+      window.addEventListener('keydown', onEsc);
+  
+      return () => {
+        window.addEventListener('keydown', onEsc);
+      };
+    }, [onClose]);
+  
+    if (!open) return null;
+  
     function onOverlayClick() {
-        onClose();
+      onClose();
     }
-    
+  
     function onDialogClick(event) {
-        event.stopPropagation();
+      event.stopPropagation();
     }
-
+  
     return (
-        <Portal>
+      <Portal>
         <Overlay onClick={onOverlayClick}>
           <Dialog onClick={onDialogClick}>{children}</Dialog>
         </Overlay>
       </Portal>
     );
-};
-
-export default Modal;
+  };
+  
+  export default Modal;
