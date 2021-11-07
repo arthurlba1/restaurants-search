@@ -4,11 +4,12 @@ import React, { useState } from 'react';
 import Slider from "react-slick";
 import TextField, { Input } from '@material/react-text-field';
 
-import { Card, RestaurantCard } from '../../components'; 
+import { Card, Modal, RestaurantCard } from '../../components'; 
 import { Carousel, Container, Logo, Search, Wrapper } from './style';
 
 const Home = () => {
     const [inputValue, setInputValue] = useState('');
+    const [modalOpened, setModalOpened] = useState(false);
 
     const settings = {
         dots: false,
