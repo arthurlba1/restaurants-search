@@ -36,3 +36,11 @@ export const Address = styled.div`
   margin-bottom: 10px;
   margin-top: 10px;
 `;
+
+export const RestaurantPhoto = styled.img`
+  border-radius: 6px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  display: ${({ imageLoaded }) => (imageLoaded ? 'block' : 'none')};
+`;
