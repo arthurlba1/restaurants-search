@@ -1,7 +1,6 @@
 import logo from '../../assets/logo.svg'
 import MaterialIcon from '@material/react-material-icon';
 import React, { useState } from 'react';
-import Slider from "react-slick";
 import TextField, { Input } from '@material/react-text-field';
 
 import { Card, Modal, RestaurantCard } from '../../components'; 
