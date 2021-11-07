@@ -34,4 +34,5 @@ export const Address = styled.div`
   font-size: 16px;
   line-height: 19px;
   margin-bottom: 10px;
+  margin-top: 10px;
 `;
