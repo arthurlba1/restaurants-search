@@ -38,6 +38,7 @@ const Home = () => {
                 </Search>
                 <RestaurantCard />
             </Container>
+            <Modal open={modalOpened} onClose ={() => setModalOpened(!modalOpened)} />
         </Wrapper>
     );
 };
