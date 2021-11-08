@@ -8,6 +8,7 @@ import { Carousel, Container, Logo, Search, Wrapper } from './style';
 
 const Home = () => {
     const [inputValue, setInputValue] = useState('');
+    const [query, setQuery] = useState('');
     const [modalOpened, setModalOpened] = useState(false);
 
     const settings = {
@@ -19,6 +20,16 @@ const Home = () => {
         slidesToScroll: 4,
         adaptiveHeight: true,
       };
+    
+    const handleChange = (e) => {
+        setValue(e.target.value);
+      };
+    
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            setQuery(value);
+        }
+    };
 
     return (
         <Wrapper>
@@ -29,7 +40,7 @@ const Home = () => {
                         outlined
                         label="Search"
                         trailingIcon={<MaterialIcon role="button" icon="search" />}>
-                        <Input value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+                         <Input type="text" value={value} onKeyPress={handleKeyPress} onChange={handleChange} />
                     </TextField>
                     <Carousel>
                         
@@ -37,7 +48,7 @@ const Home = () => {
                 </Search>
                 <RestaurantCard />
             </Container>
-            <Map/>
+            <Map query={query} />
             <Modal open={modalOpened} onClose ={() => setModalOpened(!modalOpened)} />
         </Wrapper>
     );
