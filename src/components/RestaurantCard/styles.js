@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Text from '../Text';
 
 export const Restaurant = styled.div`
   display: flex;
@@ -19,28 +20,14 @@ export const RestaurantInfo = styled.div`
   flex-direction: column;
 `;
 
-export const Title = styled.div`
-  font-family: ${(props) => props.theme.fonts.regular};
-  color: ${(props) => props.theme.colors.text};
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 29px;
-  margin-bottom: 10px;
-`;
-
-export const Address = styled.div`
-  font-family: ${(props) => props.theme.fonts.regular};
-  color: ${(props) => props.theme.colors.text};
-  font-size: 16px;
-  line-height: 19px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-`;
-
 export const RestaurantPhoto = styled.img`
   border-radius: 6px;
   width: 100px;
   height: 100px;
   object-fit: cover;
   display: ${({ imageLoaded }) => (imageLoaded ? 'block' : 'none')};
+`;
+
+export const Content = styled(Text)`
+  margin-top: 5px;
 `;
