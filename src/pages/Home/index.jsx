@@ -3,7 +3,7 @@ import MaterialIcon from '@material/react-material-icon';
 import React, { useState } from 'react';
 import TextField, { Input } from '@material/react-text-field';
 
-import { Card, Modal, RestaurantCard } from '../../components'; 
+import { Card, Map, Modal, RestaurantCard } from '../../components'; 
 import { Carousel, Container, Logo, Search, Wrapper } from './style';
 
 const Home = () => {
@@ -37,6 +37,7 @@ const Home = () => {
                 </Search>
                 <RestaurantCard />
             </Container>
+            <Map/>
             <Modal open={modalOpened} onClose ={() => setModalOpened(!modalOpened)} />
         </Wrapper>
     );
